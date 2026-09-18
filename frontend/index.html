@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        FertiScan | AI Reproductive Digital Twin
+    </title>
+
+
+    <!-- ==================================================
+         GOOGLE FONT
+    =================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ==================================================
+         CUSTOM CSS
+    =================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="/css/style.css"
+    >
+
+
+    <!-- ==================================================
+         PLOTLY
+    =================================================== -->
+
+    <script
+        src="https://cdn.plot.ly/plotly-2.35.2.min.js">
+    </script>
+
+
+    <!-- ==================================================
+         GOOGLE MODEL VIEWER
+    =================================================== -->
+
+    <script
+        type="module"
+        src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
+    </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION BAR
+====================================================== -->
+
+<header class="navbar">
+
+    <div class="navbar-inner">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🧬
+            </div>
+
+            <div>
+
+                <div class="brand-name">
+                    FertiScan
+                </div>
+
+                <div class="brand-subtitle">
+                    AI REPRODUCTIVE DIGITAL TWIN
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <nav class="nav-links">
+
+            <a href="#assessment">
+                Assessment
+            </a>
+
+            <a href="#prediction">
+                AI Prediction
+            </a>
+
+            <a href="#digital-twin">
+                Digital Twin
+            </a>
+
+            <a href="#hsg">
+                Tube Analysis
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO SECTION
+====================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            AI-POWERED REPRODUCTIVE HEALTH PLATFORM
+        </div>
+
+
+        <h1>
+
+            Personalized
+
+            <span>
+                Reproductive
+            </span>
+
+            Digital Twin
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            An AI-assisted research platform for
+            endometrial thickness prediction, fertility
+            outcome analysis, PRP response simulation,
+            menstrual-cycle modeling, 3D visualization,
+            and fallopian tube patency assessment.
+
+        </p>
+
+
+        <div class="hero-actions">
+
+            <button
+                class="primary-btn"
+                onclick="scrollToSection('assessment')"
+            >
+
+                Start Assessment
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+
+            <button
+                class="secondary-btn"
+                onclick="scrollToSection('digital-twin')"
+            >
+
+                Explore Digital Twin
+
+            </button>
+
+        </div>
+
+
+        <div class="hero-note">
+
+            <span class="status-dot"></span>
+
+            Research Prototype · AI Model Assisted
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="hero-orbit orbit-one"></div>
+
+        <div class="hero-orbit orbit-two"></div>
+
+        <div class="hero-orbit orbit-three"></div>
+
+
+        <div class="hero-center">
+
+            <div class="hero-center-icon">
+                ♀
+            </div>
+
+            <div class="hero-center-text">
+                DIGITAL
+                <br>
+                TWIN
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MAIN APPLICATION
+====================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     SECTION 1 — PATIENT ASSESSMENT
+====================================================== -->
+
+<section
+    id="assessment"
+    class="section"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="section-kicker">
+                MODULE 01
+            </div>
+
+            <h2>
+                Patient Assessment
+            </h2>
+
+            <p>
+                Enter the patient parameters used by the
+                trained AI models.
+            </p>
+
+        </div>
+
+        <div class="section-number">
+            01
+        </div>
+
+    </div>
+
+
+    <div class="assessment-layout">
+
+
+        <!-- =================================================
+             PATIENT FORM
+        ================================================== -->
+
+        <div class="card assessment-card">
+
+
+            <div class="card-title">
+
+                <span class="card-icon">
+                    👤
+                </span>
+
+                Patient & Clinical Parameters
+
+            </div>
+
+
+            <form id="predictionForm">
+
+
+                <!-- -----------------------------------------
+                     DEMOGRAPHIC
+                ------------------------------------------ -->
+
+                <div class="form-group-title">
+                    Demographic Information
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="input-group">
+
+                        <label for="age">
+                            Age
+                        </label>
+
+                        <input
+                            type="number"
+                            id="age"
+                            min="18"
+                            max="60"
+                            step="1"
+                            value="27"
+                            required
+                        >
+
+                        <span class="input-unit">
+                            years
+                        </span>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="bmi">
+                            BMI
+                        </label>
+
+                        <input
+                            type="number"
+                            id="bmi"
+                            min="10"
+                            max="50"
+                            step="0.1"
+                            value="21.5"
+                            required
+                        >
+
+                        <span class="input-unit">
+                            kg/m²
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- -----------------------------------------
+                     HORMONES
+                ------------------------------------------ -->
+
+                <div class="form-group-title">
+                    Hormonal Parameters
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="input-group">
+
+                        <label for="fsh">
+                            FSH
+                        </label>
+
+                        <input
+                            type="number"
+                            id="fsh"
+                            step="0.1"
+                            value="6.2"
+                            required
+                        >
+
+                        <span class="input-unit">
+                            mIU/mL
+                        </span>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="lh">
+                            LH
+                        </label>
+
+                        <input
+                            type="number"
+                            id="lh"
+                            step="0.1"
+                            value="5.5"
+                            required
+                        >
+
+                        <span class="input-unit">
+                            mIU/mL
+                        </span>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="estrogen">
+                            Estrogen
+                        </label>
+
+                        <input
+                            type="number"
+                            id="estrogen"
+                            step="0.1"
+                            value="150"
+                            required
+                        >
+
+                        <span class="input-unit">
+                            pg/mL
+                        </span>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="amh">
+                            AMH
+                        </label>
+
+                        <input
+                            type="number"
+                            id="amh"
+                            step="0.1"
+                            value="3.2"
+                            required
+                        >
+
+                        <span class="input-unit">
+                            ng/mL
+                        </span>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="progesterone">
+                            Progesterone
+                        </label>
+
+                        <input
+                            type="number"
+                            id="progesterone"
+                            step="0.1"
+                            value="1.5"
+                            required
+                        >
+
+                        <span class="input-unit">
+                            ng/mL
+                        </span>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="cycle_day">
+                            Cycle Day
+                        </label>
+
+                        <input
+                            type="number"
+                            id="cycle_day"
+                            min="1"
+                            max="28"
+                            step="1"
+                            value="14"
+                            required
+                        >
+
+                        <span class="input-unit">
+                            day
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- -----------------------------------------
+                     ENDOMETRIAL + PRP
+                ------------------------------------------ -->
+
+                <div class="form-group-title">
+                    Endometrium & PRP Parameters
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="input-group">
+
+                        <label for="baseline_thickness">
+                            Baseline Endometrial Thickness
+                        </label>
+
+                        <input
+                            type="number"
+                            id="baseline_thickness"
+                            min="1"
+                            max="20"
+                            step="0.1"
+                            value="6.5"
+                            required
+                        >
+
+                        <span class="input-unit">
+                            mm
+                        </span>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="prp_sessions">
+                            PRP Sessions
+                        </label>
+
+                        <input
+                            type="number"
+                            id="prp_sessions"
+                            min="0"
+                            max="10"
+                            step="1"
+                            value="3"
+                            required
+                        >
+
+                        <span class="input-unit">
+                            sessions
+                        </span>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="prp_dosage">
+                            PRP Dosage
+                        </label>
+
+                        <input
+                            type="number"
+                            id="prp_dosage"
+                            min="0"
+                            max="10"
+                            step="0.1"
+                            value="2.5"
+                            required
+                        >
+
+                        <span class="input-unit">
+                            mL
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- -----------------------------------------
+                     SUBMIT
+                ------------------------------------------ -->
+
+                <button
+                    type="submit"
+                    class="analyze-btn"
+                    id="analyzeBtn"
+                >
+
+                    <span>
+                        🧠
+                    </span>
+
+                    Analyze Patient
+
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+                <div
+                    id="predictionLoading"
+                    class="loading-message hidden"
+                >
+
+                    <div class="spinner"></div>
+
+                    AI models are analyzing the
+                    patient parameters...
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+
+        <!-- =================================================
+             QUICK INFORMATION
+        ================================================== -->
+
+        <div class="assessment-side">
+
+
+            <div class="card info-card">
+
+                <div class="card-title">
+
+                    <span class="card-icon">
+                        ✦
+                    </span>
+
+                    AI Analysis
+
+                </div>
+
+
+                <p>
+
+                    The system uses trained machine-learning
+                    models to estimate endometrial thickness
+                    and classify the modeled fertility outcome.
+
+                </p>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Regression
+                    </span>
+
+                    <strong>
+                        Random Forest
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Classification
+                    </span>
+
+                    <strong>
+                        Random Forest
+                    </strong>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span>
+                        Simulation
+                    </span>
+
+                    <strong>
+                        28 Days
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="card research-card">
+
+                <div class="research-icon">
+                    ℹ
+                </div>
+
+                <div>
+
+                    <strong>
+                        Research Prototype
+                    </strong>
+
+                    <p>
+                        Predictions are model-generated
+                        estimates and are not a substitute
+                        for clinical diagnosis.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SECTION 2 — AI PREDICTION
+====================================================== -->
+
+<section
+    id="prediction"
+    class="section prediction-section hidden"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="section-kicker">
+                MODULE 02
+            </div>
+
+            <h2>
+                AI Prediction
+            </h2>
+
+            <p>
+                Model-generated reproductive health
+                predictions for the entered patient profile.
+            </p>
+
+        </div>
+
+        <div class="section-number">
+            02
+        </div>
+
+    </div>
+
+
+    <div class="prediction-grid">
+
+
+        <!-- ENDOMETRIAL -->
+
+        <div class="result-card">
+
+            <div class="result-icon">
+                ◉
+            </div>
+
+            <div class="result-label">
+                Predicted Endometrial Thickness
+            </div>
+
+            <div
+                class="result-value"
+                id="thicknessResult"
+            >
+                --
+            </div>
+
+            <div class="result-unit">
+                mm
+            </div>
+
+        </div>
+
+
+        <!-- FERTILITY -->
+
+        <div class="result-card fertility-result">
+
+            <div class="result-icon">
+                ♡
+            </div>
+
+            <div class="result-label">
+                Modeled Fertility Outcome
+            </div>
+
+            <div
+                class="result-value"
+                id="fertilityResult"
+            >
+                --
+            </div>
+
+            <div
+                class="confidence-text"
+                id="confidenceResult"
+            >
+                Confidence: --
+            </div>
+
+        </div>
+
+
+        <!-- CYCLE -->
+
+        <div class="result-card">
+
+            <div class="result-icon">
+                ◌
+            </div>
+
+            <div class="result-label">
+                Current Cycle Day
+            </div>
+
+            <div
+                class="result-value"
+                id="cycleResult"
+            >
+                --
+            </div>
+
+            <div class="result-unit">
+                day
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PATIENT SUMMARY -->
+
+    <div class="card patient-summary-card">
+
+        <div class="card-title">
+
+            <span class="card-icon">
+                👤
+            </span>
+
+            Patient Summary
+
+        </div>
+
+
+        <div
+            class="patient-summary"
+            id="patientSummary"
+        >
+
+            <!-- Filled by JavaScript -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SECTION 3 — DIGITAL TWIN
+====================================================== -->
+
+<section
+    id="digital-twin"
+    class="section"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="section-kicker">
+                MODULE 03
+            </div>
+
+            <h2>
+                28-Day Digital Twin
+            </h2>
+
+            <p>
+                Model-estimated endometrial trajectory across
+                a complete menstrual cycle.
+            </p>
+
+        </div>
+
+        <div class="section-number">
+            03
+        </div>
+
+    </div>
+
+
+    <div class="digital-twin-layout">
+
+
+        <!-- =================================================
+             3D MODEL
+        ================================================== -->
+
+        <div class="card model-card">
+
+            <div class="card-title">
+
+                <span class="card-icon">
+                    🧬
+                </span>
+
+                Interactive 3D Reproductive System
+
+            </div>
+
+
+            <div class="model-viewer-container">
+
+                <model-viewer
+                    id="reproductiveModel"
+                    src="/assets/female_reproductive_system.glb"
+                    camera-controls
+                    auto-rotate
+                    rotation-per-second="20deg"
+                    shadow-intensity="0.7"
+                    exposure="1"
+                    environment-image="neutral"
+                    alt="3D female reproductive system"
+                >
+                </model-viewer>
+
+
+                <div class="model-overlay">
+
+                    <span class="model-status-dot"></span>
+
+                    Interactive 3D Model
+
+                </div>
+
+            </div>
+
+
+            <div class="model-info">
+
+                <div>
+
+                    <span>
+                        Endometrium
+                    </span>
+
+                    <strong
+                        id="modelThickness"
+                    >
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Cycle Day
+                    </span>
+
+                    <strong
+                        id="modelCycleDay"
+                    >
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             DYNAMIC ENDOMETRIUM
+        ================================================== -->
+
+        <div class="card endometrium-card">
+
+            <div class="card-title">
+
+                <span class="card-icon">
+                    ◉
+                </span>
+
+                Dynamic Endometrium
+
+            </div>
+
+
+            <div class="endometrium-visual">
+
+                <div class="uterus-schematic">
+
+                    <div class="uterus-outer">
+
+                        <div
+                            class="endometrium-layer"
+                            id="endometriumLayer"
+                        >
+                        </div>
+
+                        <div class="uterus-inner">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="thickness-display">
+
+                    <div class="small-label">
+                        Model Estimated Thickness
+                    </div>
+
+                    <div
+                        class="large-thickness"
+                        id="dynamicThickness"
+                    >
+                        --
+                    </div>
+
+                    <div class="small-label">
+                        millimeters
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="endometrium-note">
+
+                Visualization represents the predicted
+                endometrial thickness value. The current GLB
+                model is not physically deformed.
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         SIMULATION CONTROLS
+    ================================================== -->
+
+    <div class="card simulation-card">
+
+        <div class="simulation-header">
+
+            <div>
+
+                <div class="card-title">
+
+                    <span class="card-icon">
+                        📈
+                    </span>
+
+                    Cycle Simulation
+
+                </div>
+
+                <p>
+                    Run the 28-day model simulation using the
+                    same patient parameters.
+                </p>
+
+            </div>
+
+
+            <button
+                class="secondary-action-btn"
+                id="runSimulationBtn"
+            >
+
+                🧬 Run 28-Day Simulation
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="simulationLoading"
+            class="loading-message hidden"
+        >
+
+            <div class="spinner"></div>
+
+            Simulating 28-day cycle...
+
+        </div>
+
+
+        <!-- CHART -->
+
+        <div
+            id="simulationChart"
+            class="simulation-chart"
+        >
+
+            <div class="chart-placeholder">
+
+                <div class="chart-placeholder-icon">
+                    📊
+                </div>
+
+                <strong>
+                    28-Day Simulation
+                </strong>
+
+                <span>
+                    Run the simulation to generate the
+                    endometrial thickness trajectory.
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SUMMARY -->
+
+        <div
+            id="simulationSummary"
+            class="simulation-summary hidden"
+        >
+
+            <div class="simulation-metric">
+
+                <span>
+                    Start Thickness
+                </span>
+
+                <strong id="simStart">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="simulation-metric">
+
+                <span>
+                    End Thickness
+                </span>
+
+                <strong id="simEnd">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="simulation-metric">
+
+                <span>
+                    Maximum
+                </span>
+
+                <strong id="simMaximum">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="simulation-metric">
+
+                <span>
+                    Average
+                </span>
+
+                <strong id="simAverage">
+                    --
+                </strong>
+
+            </div>
+
+
+            <div class="simulation-metric">
+
+                <span>
+                    Peak Day
+                </span>
+
+                <strong id="simPeak">
+                    --
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- INSIGHT -->
+
+        <div
+            id="simulationInsight"
+            class="simulation-insight hidden"
+        >
+        </div>
+
+
+        <div class="scientific-note">
+
+            <span>
+                ℹ
+            </span>
+
+            Each cycle day is predicted independently from
+            fixed patient parameters. No artificial
+            day-to-day variation is introduced.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SECTION 4 — HSG
+====================================================== -->
+
+<section
+    id="hsg"
+    class="section"
+>
+
+    <div class="section-heading">
+
+        <div>
+
+            <div class="section-kicker">
+                MODULE 04
+            </div>
+
+            <h2>
+                Fallopian Tube Patency Analysis
+            </h2>
+
+            <p>
+                Upload an HSG image for AI-assisted binary
+                tube-patency classification.
+            </p>
+
+        </div>
+
+        <div class="section-number">
+            04
+        </div>
+
+    </div>
+
+
+    <div class="hsg-layout">
+
+
+        <!-- =================================================
+             UPLOAD
+        ================================================== -->
+
+        <div class="card hsg-upload-card">
+
+            <div class="card-title">
+
+                <span class="card-icon">
+                    🩻
+                </span>
+
+                HSG Image Analysis
+
+            </div>
+
+
+            <label
+                for="hsgImage"
+                class="upload-area"
+                id="uploadArea"
+            >
+
+                <div class="upload-icon">
+                    ↑
+                </div>
+
+                <strong>
+                    Upload HSG Image
+                </strong>
+
+                <span>
+                    JPG, JPEG or PNG
+                </span>
+
+                <input
+                    type="file"
+                    id="hsgImage"
+                    accept=".jpg,.jpeg,.png"
+                    hidden
+                >
+
+            </label>
+
+
+            <div
+                id="imagePreviewContainer"
+                class="image-preview-container hidden"
+            >
+
+                <img
+                    id="hsgPreview"
+                    src=""
+                    alt="Uploaded HSG"
+                >
+
+                <button
+                    class="remove-image-btn"
+                    id="removeHsgBtn"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <button
+                class="analyze-hsg-btn"
+                id="analyzeHsgBtn"
+                disabled
+            >
+
+                🧠 Analyze Tube Patency
+
+            </button>
+
+
+            <div
+                id="hsgLoading"
+                class="loading-message hidden"
+            >
+
+                <div class="spinner"></div>
+
+                AI is analyzing the HSG image...
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             HSG RESULT
+        ================================================== -->
+
+        <div
+            class="card hsg-result-card"
+            id="hsgResultCard"
+        >
+
+            <div class="card-title">
+
+                <span class="card-icon">
+                    ◉
+                </span>
+
+                Analysis Result
+
+            </div>
+
+
+            <div
+                id="hsgEmptyState"
+                class="hsg-empty-state"
+            >
+
+                <div class="empty-icon">
+                    🩻
+                </div>
+
+                <strong>
+                    No HSG analysis yet
+                </strong>
+
+                <span>
+                    Upload an HSG image and run the AI
+                    analysis to see the result.
+                </span>
+
+            </div>
+
+
+            <div
+                id="hsgResult"
+                class="hsg-result hidden"
+            >
+
+                <div class="hsg-status-icon">
+                    ✓
+                </div>
+
+
+                <div class="hsg-status-label">
+                    Tube Patency Status
+                </div>
+
+
+                <div
+                    id="hsgStatus"
+                    class="hsg-status"
+                >
+                    --
+                </div>
+
+
+                <div
+                    id="hsgConfidence"
+                    class="hsg-confidence"
+                >
+                    Confidence: --
+                </div>
+
+
+                <div
+                    id="hsgInterpretation"
+                    class="hsg-interpretation"
+                >
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hsg-disclaimer">
+
+        <span>
+            ℹ
+        </span>
+
+        The current HSG model performs binary classification
+        of Blocked versus Not Blocked. It does not separately
+        identify left and right tube status.
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL SYSTEM SUMMARY
+====================================================== -->
+
+<section class="section final-section">
+
+    <div class="final-card">
+
+        <div class="final-icon">
+            🧬
+        </div>
+
+
+        <div class="final-content">
+
+            <div class="section-kicker">
+                FERTISCAN DIGITAL TWIN
+            </div>
+
+            <h2>
+                Integrated Reproductive Health Analysis
+            </h2>
+
+            <p>
+
+                This research prototype integrates machine
+                learning prediction, PRP-related modeling,
+                menstrual-cycle simulation, 3D anatomical
+                visualization, and HSG-based tube analysis
+                within a single web interface.
+
+            </p>
+
+        </div>
+
+
+        <div class="final-modules">
+
+            <span>
+                AI Prediction
+            </span>
+
+            <span>
+                PRP Simulation
+            </span>
+
+            <span>
+                28-Day Twin
+            </span>
+
+            <span>
+                3D Anatomy
+            </span>
+
+            <span>
+                HSG Analysis
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+    <div>
+
+        <strong>
+            FertiScan
+        </strong>
+
+        <span>
+            AI-Enabled Female Reproductive Digital Twin
+        </span>
+
+    </div>
+
+
+    <div>
+        Research Prototype · 2026
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT FILES
+====================================================== -->
+
+<script
+    src="/js/main.js">
+</script>
+
+<script
+    src="/js/simulation.js">
+</script>
+
+<script
+    src="/js/hsg.js">
+</script>
+
+<script
+    src="/js/viewer.js">
+</script>
+
+
+</body>
+
+</html>

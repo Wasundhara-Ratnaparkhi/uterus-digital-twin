@@ -1,0 +1,3347 @@
+/* ==========================================================
+   FERTISCAN
+   AI REPRODUCTIVE DIGITAL TWIN
+   MAIN STYLESHEET
+   ========================================================== */
+
+
+/* ==========================================================
+   1. ROOT VARIABLES
+   ========================================================== */
+
+:root {
+
+    --bg: #f7f4f1;
+
+    --surface: #ffffff;
+
+    --surface-soft: #fbf9f7;
+
+    --text: #292522;
+
+    --text-soft: #6f6660;
+
+    --text-light: #918781;
+
+    --primary: #8b5e3c;
+
+    --primary-dark: #68432b;
+
+    --primary-soft: #c9956a;
+
+    --accent: #8c65a8;
+
+    --accent-soft: #eee6f3;
+
+    --border: #e7dfd9;
+
+    --border-dark: #d9cec6;
+
+    --success: #328052;
+
+    --success-soft: #e8f4ec;
+
+    --warning: #a46c1f;
+
+    --warning-soft: #f8f0df;
+
+    --danger: #b63b3b;
+
+    --danger-soft: #faeaea;
+
+    --shadow-sm:
+        0 4px 18px rgba(55, 42, 32, 0.06);
+
+    --shadow-md:
+        0 12px 35px rgba(55, 42, 32, 0.09);
+
+    --radius-sm: 10px;
+
+    --radius-md: 16px;
+
+    --radius-lg: 22px;
+
+    --max-width: 1240px;
+}
+
+
+/* ==========================================================
+   2. RESET
+   ========================================================== */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    background:
+        var(--bg);
+
+    color:
+        var(--text);
+
+    line-height:
+        1.6;
+
+    overflow-x:
+        hidden;
+}
+
+
+button,
+input {
+
+    font-family:
+        inherit;
+}
+
+
+button {
+
+    cursor:
+        pointer;
+}
+
+
+a {
+
+    color:
+        inherit;
+
+    text-decoration:
+        none;
+}
+
+
+/* ==========================================================
+   3. NAVBAR
+   ========================================================== */
+
+.navbar {
+
+    position:
+        sticky;
+
+    top:
+        0;
+
+    z-index:
+        1000;
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    backdrop-filter:
+        blur(18px);
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.navbar-inner {
+
+    width:
+        min(100% - 40px, var(--max-width));
+
+    margin:
+        auto;
+
+    min-height:
+        76px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        30px;
+}
+
+
+/* Brand */
+
+.brand {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+}
+
+
+.brand-icon {
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    border-radius:
+        13px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        var(--primary);
+
+    color:
+        white;
+
+    font-size:
+        20px;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+.brand-name {
+
+    font-size:
+        20px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        -0.4px;
+}
+
+
+.brand-subtitle {
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        1.5px;
+
+    color:
+        var(--text-light);
+
+    font-weight:
+        600;
+}
+
+
+/* Navigation */
+
+.nav-links {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        28px;
+}
+
+
+.nav-links a {
+
+    font-size:
+        13px;
+
+    color:
+        var(--text-soft);
+
+    font-weight:
+        500;
+
+    transition:
+        color 0.2s ease;
+}
+
+
+.nav-links a:hover {
+
+    color:
+        var(--primary);
+}
+
+
+/* ==========================================================
+   4. HERO
+   ========================================================== */
+
+.hero {
+
+    width:
+        min(100% - 40px, var(--max-width));
+
+    min-height:
+        590px;
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.1fr 0.9fr;
+
+    align-items:
+        center;
+
+    gap:
+        50px;
+
+    padding:
+        70px 0;
+}
+
+
+.hero-content {
+
+    max-width:
+        680px;
+}
+
+
+.hero-badge {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    padding:
+        7px 12px;
+
+    border-radius:
+        999px;
+
+    background:
+        var(--accent-soft);
+
+    color:
+        var(--accent);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1.3px;
+
+    margin-bottom:
+        20px;
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(42px, 5vw, 70px);
+
+    line-height:
+        1.03;
+
+    letter-spacing:
+        -2.8px;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        25px;
+}
+
+
+.hero h1 span {
+
+    display:
+        block;
+
+    color:
+        var(--primary);
+}
+
+
+.hero-description {
+
+    max-width:
+        650px;
+
+    font-size:
+        16px;
+
+    line-height:
+        1.8;
+
+    color:
+        var(--text-soft);
+
+    margin-bottom:
+        32px;
+}
+
+
+.hero-actions {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    flex-wrap:
+        wrap;
+}
+
+
+.primary-btn,
+.secondary-btn {
+
+    border:
+        none;
+
+    min-height:
+        48px;
+
+    padding:
+        0 20px;
+
+    border-radius:
+        12px;
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.primary-btn {
+
+    background:
+        var(--primary);
+
+    color:
+        white;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    box-shadow:
+        0 8px 20px rgba(139, 94, 60, 0.18);
+}
+
+
+.primary-btn:hover {
+
+    transform:
+        translateY(-2px);
+
+    background:
+        var(--primary-dark);
+
+    box-shadow:
+        0 12px 25px rgba(139, 94, 60, 0.24);
+}
+
+
+.secondary-btn {
+
+    background:
+        white;
+
+    color:
+        var(--text);
+
+    border:
+        1px solid var(--border-dark);
+}
+
+
+.secondary-btn:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        var(--primary-soft);
+}
+
+
+/* Hero note */
+
+.hero-note {
+
+    margin-top:
+        20px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    color:
+        var(--text-light);
+
+    font-size:
+        11px;
+}
+
+
+.status-dot {
+
+    width:
+        7px;
+
+    height:
+        7px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--success);
+
+    box-shadow:
+        0 0 0 4px var(--success-soft);
+}
+
+
+/* ==========================================================
+   5. HERO VISUAL
+   ========================================================== */
+
+.hero-visual {
+
+    min-height:
+        410px;
+
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+}
+
+
+.hero-center {
+
+    width:
+        190px;
+
+    height:
+        190px;
+
+    border-radius:
+        50%;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        white;
+
+    border:
+        1px solid var(--border);
+
+    box-shadow:
+        var(--shadow-md);
+
+    position:
+        relative;
+
+    z-index:
+        5;
+}
+
+
+.hero-center-icon {
+
+    font-size:
+        58px;
+
+    color:
+        var(--primary);
+
+    line-height:
+        1;
+
+    margin-bottom:
+        12px;
+}
+
+
+.hero-center-text {
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        2px;
+
+    text-align:
+        center;
+
+    color:
+        var(--text-soft);
+}
+
+
+/* Orbit circles */
+
+.hero-orbit {
+
+    position:
+        absolute;
+
+    border:
+        1px solid rgba(139, 94, 60, 0.16);
+
+    border-radius:
+        50%;
+
+    animation:
+        orbitPulse 5s ease-in-out infinite;
+}
+
+
+.orbit-one {
+
+    width:
+        270px;
+
+    height:
+        270px;
+}
+
+
+.orbit-two {
+
+    width:
+        350px;
+
+    height:
+        350px;
+
+    animation-delay:
+        0.7s;
+}
+
+
+.orbit-three {
+
+    width:
+        430px;
+
+    height:
+        430px;
+
+    animation-delay:
+        1.4s;
+}
+
+
+@keyframes orbitPulse {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+        opacity:
+            0.55;
+    }
+
+    50% {
+
+        transform:
+            scale(1.035);
+
+        opacity:
+            1;
+    }
+}
+
+
+/* ==========================================================
+   6. SECTIONS
+   ========================================================== */
+
+.section {
+
+    width:
+        min(100% - 40px, var(--max-width));
+
+    margin:
+        auto;
+
+    padding:
+        70px 0;
+}
+
+
+.section-heading {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        flex-end;
+
+    gap:
+        30px;
+
+    margin-bottom:
+        30px;
+}
+
+
+.section-kicker {
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        1.6px;
+
+    font-weight:
+        700;
+
+    color:
+        var(--primary);
+
+    margin-bottom:
+        6px;
+}
+
+
+.section-heading h2 {
+
+    font-size:
+        34px;
+
+    line-height:
+        1.15;
+
+    letter-spacing:
+        -1px;
+
+    margin-bottom:
+        8px;
+}
+
+
+.section-heading p {
+
+    font-size:
+        14px;
+
+    color:
+        var(--text-soft);
+
+    max-width:
+        650px;
+}
+
+
+.section-number {
+
+    font-size:
+        54px;
+
+    line-height:
+        1;
+
+    font-weight:
+        700;
+
+    color:
+        rgba(139, 94, 60, 0.09);
+}
+
+
+/* ==========================================================
+   7. CARDS
+   ========================================================== */
+
+.card {
+
+    background:
+        var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-lg);
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+.card-title {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    font-size:
+        15px;
+
+    font-weight:
+        600;
+
+    margin-bottom:
+        20px;
+}
+
+
+.card-icon {
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        10px;
+
+    background:
+        #f4eee9;
+
+    color:
+        var(--primary);
+
+    font-size:
+        15px;
+}
+
+
+/* ==========================================================
+   8. ASSESSMENT
+   ========================================================== */
+
+.assessment-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) 330px;
+
+    gap:
+        22px;
+
+    align-items:
+        start;
+}
+
+
+.assessment-card {
+
+    padding:
+        30px;
+}
+
+
+.form-group-title {
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    color:
+        var(--primary);
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1.2px;
+
+    margin:
+        26px 0 14px;
+}
+
+
+.form-group-title:first-of-type {
+
+    margin-top:
+        0;
+}
+
+
+.form-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        15px;
+}
+
+
+.input-group {
+
+    position:
+        relative;
+}
+
+
+.input-group label {
+
+    display:
+        block;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    color:
+        var(--text);
+
+    margin-bottom:
+        7px;
+}
+
+
+.input-group input {
+
+    width:
+        100%;
+
+    height:
+        47px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        11px;
+
+    background:
+        var(--surface-soft);
+
+    color:
+        var(--text);
+
+    padding:
+        0 70px 0 13px;
+
+    font-size:
+        13px;
+
+    outline:
+        none;
+
+    transition:
+        border 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.input-group input:focus {
+
+    border-color:
+        var(--primary-soft);
+
+    box-shadow:
+        0 0 0 3px rgba(201, 149, 106, 0.12);
+}
+
+
+.input-unit {
+
+    position:
+        absolute;
+
+    right:
+        13px;
+
+    bottom:
+        14px;
+
+    font-size:
+        10px;
+
+    color:
+        var(--text-light);
+
+    pointer-events:
+        none;
+}
+
+
+/* Analyze button */
+
+.analyze-btn {
+
+    width:
+        100%;
+
+    height:
+        52px;
+
+    margin-top:
+        28px;
+
+    border:
+        none;
+
+    border-radius:
+        13px;
+
+    background:
+        var(--primary);
+
+    color:
+        white;
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        12px;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.analyze-btn:hover {
+
+    background:
+        var(--primary-dark);
+
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 9px 20px rgba(139, 94, 60, 0.2);
+}
+
+
+/* ==========================================================
+   9. SIDE INFORMATION
+   ========================================================== */
+
+.assessment-side {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        18px;
+}
+
+
+.info-card {
+
+    padding:
+        24px;
+}
+
+
+.info-card > p {
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+
+    color:
+        var(--text-soft);
+
+    margin-bottom:
+        18px;
+}
+
+
+.info-item {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        12px 0;
+
+    border-top:
+        1px solid var(--border);
+
+    font-size:
+        11px;
+}
+
+
+.info-item span {
+
+    color:
+        var(--text-light);
+}
+
+
+.info-item strong {
+
+    color:
+        var(--text);
+}
+
+
+.research-card {
+
+    padding:
+        18px;
+
+    display:
+        flex;
+
+    gap:
+        13px;
+
+    background:
+        var(--accent-soft);
+
+    border-color:
+        #e3d6eb;
+}
+
+
+.research-icon {
+
+    flex:
+        0 0 auto;
+
+    width:
+        32px;
+
+    height:
+        32px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    background:
+        white;
+
+    color:
+        var(--accent);
+
+    font-weight:
+        700;
+}
+
+
+.research-card strong {
+
+    font-size:
+        12px;
+}
+
+
+.research-card p {
+
+    font-size:
+        10px;
+
+    color:
+        var(--text-soft);
+
+    line-height:
+        1.6;
+
+    margin-top:
+        3px;
+}
+
+
+/* ==========================================================
+   10. PREDICTION SECTION
+   ========================================================== */
+
+.prediction-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        18px;
+
+    margin-bottom:
+        20px;
+}
+
+
+.result-card {
+
+    background:
+        white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-lg);
+
+    padding:
+        25px;
+
+    min-height:
+        190px;
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+.result-icon {
+
+    width:
+        40px;
+
+    height:
+        40px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        12px;
+
+    background:
+        #f4eee9;
+
+    color:
+        var(--primary);
+
+    margin-bottom:
+        18px;
+}
+
+
+.result-label {
+
+    font-size:
+        11px;
+
+    color:
+        var(--text-light);
+
+    margin-bottom:
+        8px;
+}
+
+
+.result-value {
+
+    font-size:
+        33px;
+
+    font-weight:
+        700;
+
+    color:
+        var(--primary);
+
+    line-height:
+        1.1;
+}
+
+
+.result-unit {
+
+    font-size:
+        11px;
+
+    color:
+        var(--text-light);
+
+    margin-top:
+        3px;
+}
+
+
+.confidence-text {
+
+    font-size:
+        11px;
+
+    color:
+        var(--text-soft);
+
+    margin-top:
+        8px;
+}
+
+
+.fertility-result .result-value {
+
+    color:
+        var(--success);
+}
+
+
+/* ==========================================================
+   11. PATIENT SUMMARY
+   ========================================================== */
+
+.patient-summary-card {
+
+    padding:
+        25px;
+}
+
+
+.patient-summary {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap:
+        10px;
+}
+
+
+.summary-item {
+
+    background:
+        var(--surface-soft);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        11px;
+
+    padding:
+        12px;
+}
+
+
+.summary-item span {
+
+    display:
+        block;
+
+    font-size:
+        9px;
+
+    color:
+        var(--text-light);
+
+    margin-bottom:
+        3px;
+}
+
+
+.summary-item strong {
+
+    font-size:
+        12px;
+}
+
+
+/* ==========================================================
+   12. DIGITAL TWIN
+   ========================================================== */
+
+.digital-twin-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1.15fr 0.85fr;
+
+    gap:
+        20px;
+
+    margin-bottom:
+        20px;
+}
+
+
+/* 3D Model */
+
+.model-card {
+
+    padding:
+        25px;
+}
+
+
+.model-viewer-container {
+
+    height:
+        470px;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f8f5f2,
+            #eee8e2
+        );
+
+    border:
+        1px solid var(--border);
+}
+
+
+model-viewer {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    background:
+        transparent;
+}
+
+
+.model-overlay {
+
+    position:
+        absolute;
+
+    left:
+        15px;
+
+    bottom:
+        15px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        8px 11px;
+
+    background:
+        rgba(255,255,255,0.9);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        999px;
+
+    font-size:
+        10px;
+
+    color:
+        var(--text-soft);
+
+    backdrop-filter:
+        blur(8px);
+}
+
+
+.model-status-dot {
+
+    width:
+        6px;
+
+    height:
+        6px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--success);
+}
+
+
+.model-info {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        10px;
+
+    margin-top:
+        12px;
+}
+
+
+.model-info > div {
+
+    padding:
+        12px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        11px;
+
+    background:
+        var(--surface-soft);
+}
+
+
+.model-info span {
+
+    display:
+        block;
+
+    font-size:
+        9px;
+
+    color:
+        var(--text-light);
+}
+
+
+.model-info strong {
+
+    font-size:
+        15px;
+
+    color:
+        var(--primary);
+}
+
+
+/* ==========================================================
+   13. ENDOMETRIUM VISUAL
+   ========================================================== */
+
+.endometrium-card {
+
+    padding:
+        25px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+}
+
+
+.endometrium-visual {
+
+    flex:
+        1;
+
+    min-height:
+        470px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        25px;
+
+    border-radius:
+        16px;
+
+    background:
+        var(--surface-soft);
+
+    border:
+        1px solid var(--border);
+}
+
+
+/* Uterus schematic */
+
+.uterus-schematic {
+
+    width:
+        210px;
+
+    height:
+        230px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+}
+
+
+.uterus-outer {
+
+    width:
+        150px;
+
+    height:
+        185px;
+
+    position:
+        relative;
+
+    background:
+        #ead8d0;
+
+    border:
+        2px solid #c9a99b;
+
+    border-radius:
+        48% 48% 43% 43% / 38% 38% 62% 62%;
+
+    transform:
+        rotate(180deg);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+}
+
+
+.uterus-outer::before,
+.uterus-outer::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        72px;
+
+    height:
+        28px;
+
+    background:
+        #ead8d0;
+
+    border:
+        2px solid #c9a99b;
+
+    top:
+        16px;
+
+    border-radius:
+        50%;
+}
+
+
+.uterus-outer::before {
+
+    left:
+        -62px;
+
+    transform:
+        rotate(-15deg);
+}
+
+
+.uterus-outer::after {
+
+    right:
+        -62px;
+
+    transform:
+        rotate(15deg);
+}
+
+
+.uterus-inner {
+
+    width:
+        88px;
+
+    height:
+        120px;
+
+    background:
+        #fff9f5;
+
+    border:
+        2px solid #c9956a;
+
+    border-radius:
+        45% 45% 40% 40%;
+
+    position:
+        relative;
+
+    z-index:
+        2;
+}
+
+
+/* Dynamic endometrial layer */
+
+.endometrium-layer {
+
+    position:
+        absolute;
+
+    width:
+        104px;
+
+    height:
+        138px;
+
+    background:
+        rgba(201, 149, 106, 0.42);
+
+    border:
+        2px solid rgba(139, 94, 60, 0.55);
+
+    border-radius:
+        45% 45% 40% 40%;
+
+    z-index:
+        3;
+
+    transition:
+        all 0.6s ease;
+}
+
+
+.thickness-display {
+
+    text-align:
+        center;
+}
+
+
+.small-label {
+
+    font-size:
+        10px;
+
+    color:
+        var(--text-light);
+
+    letter-spacing:
+        0.3px;
+}
+
+
+.large-thickness {
+
+    font-size:
+        42px;
+
+    line-height:
+        1;
+
+    color:
+        var(--primary);
+
+    font-weight:
+        700;
+
+    margin:
+        5px 0;
+}
+
+
+.endometrium-note {
+
+    font-size:
+        10px;
+
+    color:
+        var(--text-light);
+
+    line-height:
+        1.6;
+
+    margin-top:
+        12px;
+
+    text-align:
+        center;
+}
+
+
+/* ==========================================================
+   14. SIMULATION CARD
+   ========================================================== */
+
+.simulation-card {
+
+    padding:
+        28px;
+}
+
+
+.simulation-header {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    margin-bottom:
+        20px;
+}
+
+
+.simulation-header .card-title {
+
+    margin-bottom:
+        4px;
+}
+
+
+.simulation-header p {
+
+    font-size:
+        11px;
+
+    color:
+        var(--text-soft);
+}
+
+
+.secondary-action-btn {
+
+    height:
+        44px;
+
+    padding:
+        0 17px;
+
+    border:
+        1px solid var(--border-dark);
+
+    border-radius:
+        11px;
+
+    background:
+        white;
+
+    color:
+        var(--text);
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    white-space:
+        nowrap;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.secondary-action-btn:hover {
+
+    border-color:
+        var(--primary-soft);
+
+    color:
+        var(--primary);
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* ==========================================================
+   15. CHART
+   ========================================================== */
+
+.simulation-chart {
+
+    width:
+        100%;
+
+    min-height:
+        430px;
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        15px;
+
+    overflow:
+        hidden;
+
+    background:
+        white;
+}
+
+
+.chart-placeholder {
+
+    min-height:
+        430px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    color:
+        var(--text-soft);
+
+    gap:
+        5px;
+}
+
+
+.chart-placeholder-icon {
+
+    width:
+        60px;
+
+    height:
+        60px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        18px;
+
+    background:
+        #f4eee9;
+
+    font-size:
+        25px;
+
+    margin-bottom:
+        10px;
+}
+
+
+.chart-placeholder strong {
+
+    font-size:
+        14px;
+
+    color:
+        var(--text);
+}
+
+
+.chart-placeholder span {
+
+    font-size:
+        11px;
+}
+
+
+/* ==========================================================
+   16. SIMULATION SUMMARY
+   ========================================================== */
+
+.simulation-summary {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap:
+        10px;
+
+    margin-top:
+        15px;
+}
+
+
+.simulation-metric {
+
+    padding:
+        14px;
+
+    background:
+        var(--surface-soft);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        11px;
+}
+
+
+.simulation-metric span {
+
+    display:
+        block;
+
+    font-size:
+        9px;
+
+    color:
+        var(--text-light);
+
+    margin-bottom:
+        3px;
+}
+
+
+.simulation-metric strong {
+
+    font-size:
+        14px;
+
+    color:
+        var(--primary);
+}
+
+
+/* ==========================================================
+   17. SIMULATION INSIGHT
+   ========================================================== */
+
+.simulation-insight {
+
+    margin-top:
+        15px;
+
+    padding:
+        15px 17px;
+
+    border-radius:
+        12px;
+
+    font-size:
+        11px;
+
+    line-height:
+        1.7;
+}
+
+
+.simulation-insight.good {
+
+    background:
+        var(--success-soft);
+
+    border:
+        1px solid #cfe7d7;
+
+    color:
+        var(--success);
+}
+
+
+.simulation-insight.moderate {
+
+    background:
+        var(--warning-soft);
+
+    border:
+        1px solid #eadbbd;
+
+    color:
+        var(--warning);
+}
+
+
+.simulation-insight.poor {
+
+    background:
+        var(--danger-soft);
+
+    border:
+        1px solid #eccaca;
+
+    color:
+        var(--danger);
+}
+
+
+/* ==========================================================
+   18. SCIENTIFIC NOTES
+   ========================================================== */
+
+.scientific-note,
+.hsg-disclaimer {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    gap:
+        8px;
+
+    margin-top:
+        15px;
+
+    padding:
+        12px 14px;
+
+    border-radius:
+        10px;
+
+    background:
+        #f8f5f2;
+
+    border:
+        1px solid var(--border);
+
+    color:
+        var(--text-light);
+
+    font-size:
+        10px;
+
+    line-height:
+        1.6;
+}
+
+
+/* ==========================================================
+   19. HSG SECTION
+   ========================================================== */
+
+.hsg-layout {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        20px;
+}
+
+
+.hsg-upload-card,
+.hsg-result-card {
+
+    padding:
+        28px;
+
+    min-height:
+        400px;
+}
+
+
+/* Upload */
+
+.upload-area {
+
+    min-height:
+        230px;
+
+    border:
+        2px dashed var(--border-dark);
+
+    border-radius:
+        16px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    gap:
+        6px;
+
+    cursor:
+        pointer;
+
+    transition:
+        all 0.2s ease;
+
+    background:
+        var(--surface-soft);
+}
+
+
+.upload-area:hover {
+
+    border-color:
+        var(--primary-soft);
+
+    background:
+        #fcf9f6;
+}
+
+
+.upload-icon {
+
+    width:
+        52px;
+
+    height:
+        52px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        15px;
+
+    background:
+        #f2ebe5;
+
+    color:
+        var(--primary);
+
+    font-size:
+        25px;
+
+    margin-bottom:
+        8px;
+}
+
+
+.upload-area strong {
+
+    font-size:
+        14px;
+}
+
+
+.upload-area span {
+
+    font-size:
+        10px;
+
+    color:
+        var(--text-light);
+}
+
+
+/* Image preview */
+
+.image-preview-container {
+
+    position:
+        relative;
+
+    margin-top:
+        15px;
+
+    height:
+        230px;
+
+    border-radius:
+        14px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid var(--border);
+
+    background:
+        #111;
+}
+
+
+.image-preview-container img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        contain;
+}
+
+
+.remove-image-btn {
+
+    position:
+        absolute;
+
+    top:
+        10px;
+
+    right:
+        10px;
+
+    width:
+        30px;
+
+    height:
+        30px;
+
+    border:
+        none;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(0,0,0,0.65);
+
+    color:
+        white;
+
+    font-size:
+        18px;
+}
+
+
+/* HSG button */
+
+.analyze-hsg-btn {
+
+    width:
+        100%;
+
+    height:
+        48px;
+
+    margin-top:
+        15px;
+
+    border:
+        none;
+
+    border-radius:
+        12px;
+
+    background:
+        var(--primary);
+
+    color:
+        white;
+
+    font-size:
+        13px;
+
+    font-weight:
+        600;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.analyze-hsg-btn:hover:not(:disabled) {
+
+    background:
+        var(--primary-dark);
+
+    transform:
+        translateY(-1px);
+}
+
+
+.analyze-hsg-btn:disabled {
+
+    opacity:
+        0.45;
+
+    cursor:
+        not-allowed;
+}
+
+
+/* ==========================================================
+   20. HSG RESULT
+   ========================================================== */
+
+.hsg-result-card {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+}
+
+
+.hsg-empty-state {
+
+    flex:
+        1;
+
+    min-height:
+        280px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    gap:
+        6px;
+}
+
+
+.empty-icon {
+
+    font-size:
+        45px;
+
+    margin-bottom:
+        10px;
+
+    opacity:
+        0.65;
+}
+
+
+.hsg-empty-state strong {
+
+    font-size:
+        14px;
+}
+
+
+.hsg-empty-state span {
+
+    max-width:
+        270px;
+
+    font-size:
+        10px;
+
+    color:
+        var(--text-light);
+
+    line-height:
+        1.6;
+}
+
+
+.hsg-result {
+
+    flex:
+        1;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+}
+
+
+.hsg-status-icon {
+
+    width:
+        65px;
+
+    height:
+        65px;
+
+    border-radius:
+        50%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        var(--success-soft);
+
+    color:
+        var(--success);
+
+    font-size:
+        28px;
+
+    margin-bottom:
+        15px;
+}
+
+
+.hsg-status-label {
+
+    font-size:
+        10px;
+
+    color:
+        var(--text-light);
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        1px;
+}
+
+
+.hsg-status {
+
+    font-size:
+        30px;
+
+    font-weight:
+        700;
+
+    color:
+        var(--success);
+
+    margin:
+        4px 0;
+}
+
+
+.hsg-confidence {
+
+    font-size:
+        12px;
+
+    color:
+        var(--text-soft);
+
+    margin-bottom:
+        20px;
+}
+
+
+.hsg-interpretation {
+
+    max-width:
+        400px;
+
+    padding:
+        13px 16px;
+
+    border-radius:
+        11px;
+
+    background:
+        var(--surface-soft);
+
+    border:
+        1px solid var(--border);
+
+    font-size:
+        10px;
+
+    color:
+        var(--text-soft);
+
+    line-height:
+        1.65;
+}
+
+
+/* ==========================================================
+   21. FINAL SECTION
+   ========================================================== */
+
+.final-section {
+
+    padding-top:
+        20px;
+
+    padding-bottom:
+        80px;
+}
+
+
+.final-card {
+
+    padding:
+        35px;
+
+    border-radius:
+        22px;
+
+    background:
+        var(--primary);
+
+    color:
+        white;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        auto 1fr;
+
+    gap:
+        25px;
+
+    align-items:
+        center;
+
+    box-shadow:
+        var(--shadow-md);
+}
+
+
+.final-icon {
+
+    width:
+        65px;
+
+    height:
+        65px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(255,255,255,0.14);
+
+    font-size:
+        28px;
+}
+
+
+.final-card .section-kicker {
+
+    color:
+        rgba(255,255,255,0.65);
+}
+
+
+.final-card h2 {
+
+    font-size:
+        26px;
+
+    margin-bottom:
+        8px;
+}
+
+
+.final-card p {
+
+    font-size:
+        12px;
+
+    color:
+        rgba(255,255,255,0.75);
+
+    max-width:
+        750px;
+}
+
+
+.final-modules {
+
+    grid-column:
+        2;
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        7px;
+
+    margin-top:
+        -10px;
+}
+
+
+.final-modules span {
+
+    padding:
+        6px 10px;
+
+    border:
+        1px solid rgba(255,255,255,0.18);
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border-radius:
+        999px;
+
+    font-size:
+        9px;
+}
+
+
+/* ==========================================================
+   22. FOOTER
+   ========================================================== */
+
+.footer {
+
+    border-top:
+        1px solid var(--border);
+
+    padding:
+        25px max(20px, calc((100% - var(--max-width)) / 2));
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+    font-size:
+        10px;
+
+    color:
+        var(--text-light);
+
+    background:
+        white;
+}
+
+
+.footer strong {
+
+    color:
+        var(--text);
+
+    margin-right:
+        10px;
+}
+
+
+/* ==========================================================
+   23. LOADING
+   ========================================================== */
+
+.loading-message {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        10px;
+
+    padding:
+        15px;
+
+    margin-top:
+        12px;
+
+    border-radius:
+        11px;
+
+    background:
+        #f8f5f2;
+
+    border:
+        1px solid var(--border);
+
+    color:
+        var(--text-soft);
+
+    font-size:
+        11px;
+}
+
+
+.spinner {
+
+    width:
+        17px;
+
+    height:
+        17px;
+
+    border:
+        2px solid #ded5ce;
+
+    border-top-color:
+        var(--primary);
+
+    border-radius:
+        50%;
+
+    animation:
+        spin 0.8s linear infinite;
+}
+
+
+@keyframes spin {
+
+    to {
+
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+/* ==========================================================
+   24. UTILITY
+   ========================================================== */
+
+.hidden {
+
+    display:
+        none !important;
+}
+
+
+/* ==========================================================
+   25. RESPONSIVE — TABLET
+   ========================================================== */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+
+        gap:
+            15px;
+    }
+
+
+    .hero {
+
+        grid-template-columns:
+            1fr;
+
+        text-align:
+            center;
+    }
+
+
+    .hero-content {
+
+        margin:
+            auto;
+    }
+
+
+    .hero-actions,
+    .hero-note {
+
+        justify-content:
+            center;
+    }
+
+
+    .hero-visual {
+
+        min-height:
+            360px;
+    }
+
+
+    .assessment-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .assessment-side {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .digital-twin-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .hsg-layout {
+
+        grid-template-columns:
+            1fr;
+    }
+}
+
+
+/* ==========================================================
+   26. RESPONSIVE — MOBILE
+   ========================================================== */
+
+@media (max-width: 700px) {
+
+    .navbar-inner {
+
+        width:
+            min(100% - 25px, var(--max-width));
+
+        min-height:
+            65px;
+    }
+
+
+    .nav-links {
+
+        display:
+            none;
+    }
+
+
+    .brand-subtitle {
+
+        display:
+            none;
+    }
+
+
+    .hero,
+    .section {
+
+        width:
+            min(100% - 25px, var(--max-width));
+    }
+
+
+    .hero {
+
+        padding:
+            50px 0;
+
+        min-height:
+            auto;
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            42px;
+
+        letter-spacing:
+            -1.8px;
+    }
+
+
+    .hero-description {
+
+        font-size:
+            14px;
+    }
+
+
+    .hero-visual {
+
+        min-height:
+            300px;
+    }
+
+
+    .orbit-one {
+
+        width:
+            200px;
+
+        height:
+            200px;
+    }
+
+
+    .orbit-two {
+
+        width:
+            260px;
+
+        height:
+            260px;
+    }
+
+
+    .orbit-three {
+
+        width:
+            320px;
+
+        height:
+            320px;
+    }
+
+
+    .hero-center {
+
+        width:
+            145px;
+
+        height:
+            145px;
+    }
+
+
+    .hero-center-icon {
+
+        font-size:
+            45px;
+    }
+
+
+    .section {
+
+        padding:
+            50px 0;
+    }
+
+
+    .section-heading h2 {
+
+        font-size:
+            27px;
+    }
+
+
+    .section-number {
+
+        display:
+            none;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .assessment-card {
+
+        padding:
+            20px;
+    }
+
+
+    .assessment-side {
+
+        display:
+            flex;
+    }
+
+
+    .prediction-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .patient-summary {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .simulation-header {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+    }
+
+
+    .simulation-summary {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .simulation-card {
+
+        padding:
+            20px;
+    }
+
+
+    .model-viewer-container {
+
+        height:
+            360px;
+    }
+
+
+    .endometrium-visual {
+
+        min-height:
+            400px;
+    }
+
+
+    .final-card {
+
+        grid-template-columns:
+            1fr;
+
+        padding:
+            25px;
+    }
+
+
+    .final-modules {
+
+        grid-column:
+            1;
+    }
+
+
+    .footer {
+
+        flex-direction:
+            column;
+    }
+}
